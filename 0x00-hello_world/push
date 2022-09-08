@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo "Enter the command text from second line"
+read command
+
+echo ""
+
+echo "enter file name: "
+read file
+
+echo -e "#!/bin/bash\n"$command > $file
+
+echo " "
+
+ls #list file after adding create file
+
+echo " "
+
+chmod 755 $file #change persmission for file
+
+echo "enter a commit message: " 
+
+read msg  #type commit message
+
+git add . #add files to staging area
+
+git commit -m "$msg" #commits changes using the commit message gotten as input
+
+git status -s #checking stagin area after commit
+
+git push #push new commits to main
+
+echo "TASK IS DONE, COMMIT PUSH TO REMOTE"
