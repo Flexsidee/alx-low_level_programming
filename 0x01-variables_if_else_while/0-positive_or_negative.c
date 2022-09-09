@@ -1,6 +1,10 @@
 #include <stdlib.h>
-signs a random number every time
-~*/
+#include <time.h>
+#include <stdio.h>
+
+/** 
+* main - assigns a random number every time
+*/
 
 int main(void)
 {
